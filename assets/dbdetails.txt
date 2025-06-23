@@ -1,0 +1,39 @@
+date base name electrodb
+
+
+customer table:
+cid
+email 
+phone
+full name
+password
+address in json
+join date
+Cart text json
+wishlist json
+
+
+
+
+product table:
+pid
+product name
+brand name
+short_des
+long_des
+imgs link 
+product_price
+quantity
+discout
+
+
+
+Purchase table:
+order id
+cart
+cid
+address
+status
+purchase_date
+
+ 

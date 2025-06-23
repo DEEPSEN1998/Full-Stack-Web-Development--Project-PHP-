@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishlist</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style-prefix.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+
+<style>
+.price-box {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between items */
+  flex-wrap: wrap; /* allow wrap on small screens */
+}
+.price-box .price {
+  margin: 0;
+  font-weight: bold;
+}
+.price-box del {
+  color: gray;
+}
+.price-box .add-cart-btn {
+  margin-left: auto; /* push button to the right */
+}
+
+@media (max-width: 600px) {
+  .price-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price-box .add-cart-btn {
+    margin-left: 0;
+  }
+}
+
+</style>
+</head>
+<body>
+	<div class="product-main">
+
+            <h2 class="title">Products</h2>
+
+            <div class="product-grid">
+
+              <div class="showcase">
+
+                <div class="showcase-banner">
+
+                  <img src="./assets/images/icons/monitor.jpeg" alt="monitor" width="300" class="product-img default">
+                  <img src="./assets/images/icons/monitor.jpeg" alt="monitor" width="300" class="product-img hover">
+
+                  <p class="showcase-badge">15%</p>
+
+                  <div class="showcase-actions">
+
+                   
+
+                    
+
+                    <button class="btn-action">
+                      <i class="fa-solid fa-cart-plus" style="font-size: 14px; color: black;"></i>
+                    </button>
+
+                  </div>
+
+                </div>
+
+                <div class="showcase-content">
+
+                  <a href="#" class="showcase-category">Monitor</a>
+
+                  <a href="#">
+                    <h3 class="showcase-title">Full HD 28 inch</h3>
+                  </a>
+
+                  <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+
+                  <div class="price-box">
+                    <p class="price">₹7500.00</p>
+                    <del>₹6299.00</del>
+					<button class="w3-button w3-red w3-round add-cart-btn">Remove</button>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+              
+                <div class="showcase-banner">
+                  <img src="./assets/images/icons/router.jpg" alt="router" class="product-img default"
+                    width="300">
+                  <img src="./assets/images/icons/router.jpg" alt="router" class="product-img hover"
+                    width="300">
+              
+                  <p class="showcase-badge angle black">sale</p>
+              
+                  <div class="showcase-actions">
+                    
+              
+                    
+              
+                    <button class="btn-action">
+                      <i class="fa-solid fa-cart-plus" style="font-size: 14px; color: black;"></i>
+                    </button>
+                  </div>
+                </div>
+              
+                <div class="showcase-content">
+                  <a href="#" class="showcase-category">Router</a>
+              
+                  <h3>
+                    <a href="#" class="showcase-title">Latest router</a>
+                  </h3>
+              
+                  <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+              
+                  <div class="price-box">
+                    <p class="price">₹2500.00</p>
+                    <del>₹2300.00</del>
+					<button class="w3-button w3-red w3-round add-cart-btn">Remove</button>
+                  </div>
+              
+                </div>
+              
+              </div>
+
+              <div class="showcase">
+              
+                <div class="showcase-banner">
+                  <img src="./assets/images/icons/phone.jpeg" alt="phone" class="product-img default"
+                    width="300">
+                  <img src="./assets/images/s25.jpeg" alt="phone" class="product-img hover"
+                    width="300">
+              
+                  <div class="showcase-actions">
+                    
+              
+                    
+              
+                    <button class="btn-action">
+                      <i class="fa-solid fa-cart-plus" style="font-size: 14px; color: black;"></i>
+                    </button>
+                  </div>
+                </div>
+              
+                <div class="showcase-content">
+                  <a href="#" class="showcase-category">Mobiles</a>
+              
+                  <h3>
+                    <a href="#" class="showcase-title">Latest Mobiles</a>
+                  </h3>
+              
+                  <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+              
+                  <div class="price-box">
+                    <p class="price">₹99000.00</p>
+                    <del>₹89000.00</del>
+					<button class="w3-button w3-red w3-round add-cart-btn">Remove</button>
+                  </div>
+              
+                </div>
+              
+              </div>
+
+              
+
+              
+
+              
+
+              <div class="showcase">
+              
+                <div class="showcase-banner">
+                  <img src="./assets/images/products/watch-1.jpg" alt="Smart watche Vital Plus" class="product-img default"
+                    width="300">
+                  <img src="./assets/images/products/watch-2.jpg" alt="Smart watche Vital Plus" class="product-img hover" width="300">
+              
+                  <div class="showcase-actions">
+                   
+              
+                    
+              
+                    <button class="btn-action">
+                      <i class="fa-solid fa-cart-plus" style="font-size: 14px; color: black;"></i>
+                    </button>
+                  </div>
+                </div>
+              
+                <div class="showcase-content">
+                  <a href="#" class="showcase-category">watches</a>
+              
+                  <h3>
+                    <a href="#" class="showcase-title">Smart watche Vital Plus</a>
+                  </h3>
+              
+                  <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+              
+                  <div class="price-box">
+                    <p class="price">₹2500.00</p>
+                    <del>₹2800.00</del>
+					<button class="w3-button w3-red w3-round add-cart-btn ">Remove</button>
+                  </div>
+               
+                </div>
+              
+              </div>
+
+              <div class="showcase">
+  <div class="showcase-banner">
+    <img src="./assets/images/icons/laptop.jpeg" alt="laptop" class="product-img default" width="300">
+    <img src="./assets/images/icons/laptop.jpeg" alt="laptop" class="product-img hover" width="300">
+    <p class="showcase-badge angle black">sale</p>
+    <div class="showcase-actions">
+     
+      <button class="btn-action"><i class="fa-solid fa-cart-plus" style="font-size: 14px; color: black;"></i></button>
+    </div>
+  </div>
+  <div class="showcase-content">
+    <a href="#" class="showcase-category">electronics</a>
+    <h3><a href="#" class="showcase-title">High-Performance Laptop</a></h3>
+    <div class="showcase-rating">
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star-outline"></ion-icon>
+      <ion-icon name="star-outline"></ion-icon>
+    </div>
+    <div class="price-box">
+      <p class="price">₹55,000.00</p>
+      <del>₹60,000.00</del>
+	  <button class="w3-button w3-red w3-round add-cart-btn">Remove</button>
+    </div>
+  </div>
+</div>
+
+<div class="showcase">
+  <div class="showcase-banner">
+    <img src="./assets/images/icons/printer.jpeg" alt="printer" class="product-img default" width="300">
+    <img src="./assets/images/icons/printer.jpeg" alt="printer" class="product-img hover" width="300">
+    <div class="showcase-actions">
+     
+      <button class="btn-action"><i class="fa-solid fa-cart-plus" style="font-size: 14px; color: black;"></i></button>
+    </div>
+  </div>
+  <div class="showcase-content">
+    <a href="#" class="showcase-category">electronics</a>
+    <h3><a href="#" class="showcase-title">All-in-One Printer</a></h3>
+    <div class="showcase-rating">
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star-outline"></ion-icon>
+    </div>
+    <div class="price-box">
+      <p class="price">₹12,000.00</p>
+      <del>₹15,000.00</del>
+	  <button class="w3-button w3-red w3-round add-cart-btn">Remove</button>
+    </div>
+  </div>
+</div>
+
+<div class="showcase">
+  <div class="showcase-banner">
+    <img src="./assets/images/icons/keybord.jpeg" alt="keyboard" class="product-img default" width="300">
+    <img src="./assets/images/icons/keybord.jpeg" alt="keyboard" class="product-img hover" width="300">
+    <div class="showcase-actions">
+     
+      <button class="btn-action"><i class="fa-solid fa-cart-plus" style="font-size: 14px; color: black;"></i></button>
+    </div>
+  </div>
+  <div class="showcase-content">
+    <a href="#" class="showcase-category">accessories</a>
+    <h3><a href="#" class="showcase-title">Mechanical Keyboard</a></h3>
+    <div class="showcase-rating">
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+    </div>
+    <div class="price-box">
+      <p class="price">₹4,500.00</p>
+      <del>₹5,500.00</del>
+	  <button class="w3-button w3-red w3-round add-cart-btn">Remove</button>
+    </div>
+  </div>
+</div>
+
+<div class="showcase">
+  <div class="showcase-banner">
+    <img src="./assets/images/icons/graphics card.jpg" alt="graphics card" class="product-img default" width="300">
+    <img src="./assets/images/icons/graphics card.jpg" alt="graphics card" class="product-img hover" width="300">
+    <div class="showcase-actions">
+     
+      <button class="btn-action"><i class="fa-solid fa-cart-plus" style="font-size: 14px; color: black;"></i></button>
+    </div>
+  </div>
+  <div class="showcase-content">
+    <a href="#" class="showcase-category">hardware</a>
+    <h3><a href="#" class="showcase-title">High-End Graphics Card</a></h3>
+    <div class="showcase-rating">
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star-outline"></ion-icon>
+    </div>
+    <div class="price-box">
+      <p class="price">₹45,000.00</p>
+      <del>₹50,000.00</del>
+	  <button class="w3-button w3-red w3-round add-cart-btn">Remove</button>
+    </div>
+  </div>
+</div>
+              
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+	<script src="./assets/js/script.js"></script>
+</body>
+</html>

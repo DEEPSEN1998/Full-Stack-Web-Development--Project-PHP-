@@ -1,0 +1,117 @@
+================================================================================
+  ELECTROSHOP — FULL-STACK E-COMMERCE (PHP + MySQL) — PROJECT FEATURES
+================================================================================
+
+OVERVIEW
+--------
+ElectroShop is a browser-based electronics storefront with a customer-facing site
+and an admin back office. Pages are routed through index.php with optional query
+parameters; session state drives cart, wishlist, checkout draft, and logged-in
+customer identity. Product catalog data lives in MySQL (database bootstrap and
+table creation ship with admin/db.php).
+
+
+TECHNOLOGY STACK
+----------------
+• Server-side: PHP (sessions, mysqli)
+• Database: MySQL / MariaDB (InnoDB, utf8mb4)
+• Front-end: HTML, CSS (custom + Bootstrap / W3.CSS), JavaScript (theme UI)
+• Icons: Ion Icons (CDN)
+• Optional: TinyMCE on admin product long description
+
+
+CUSTOMER-FACING STORE (PUBLIC SITE)
+-----------------------------------
+
+1. Layout & navigation
+   • Single front controller pattern: index.php loads header.php (routing + logic)
+     and injects body pages (home, cart, product, etc.).
+   • Responsive header with search, category-style menus, mobile menu behaviour,
+     footer with policies, contact block, payment badges.
+   • Hash links for sections (e.g. categories, testimonials, deal carousel).
+
+2. Home & merchandising
+   • Bootstrap image carousel (banners / promotions).
+   • “Deal of the day” carousel driven by database products (e.g. featured SKUs
+     by product name).
+   • Product grid listing all catalog items with image, title, star rating UI,
+     discounted price vs MRP, wishlist and add-to-cart shortcuts.
+   • Sidebar category list with product counts; filter products by category via
+     query parameter.
+   • Search: POST search filters products by name or brand on the grid.
+
+3. Product discovery & detail
+   • Product detail page (?product&p=<pid>): gallery from JSON image list,
+     brand, short/long descriptions (long/short stored base64-encoded in DB),
+     price after discount, quantity selector (bounded by stock), add to cart.
+
+4. Shopping cart
+   • Session-based cart keyed by product id (pid); quantities per line.
+   • Add from product page (POST) or quick-add links (?a2c=<pid>).
+   • Remove line items (?rmcart=<pid>).
+   • Cart contents persisted to customer row when logged in (sync).
+
+5. Wishlist
+   • Session wishlist; add via ?wl=<pid>, remove via ?rmwish=<pid>.
+   • Synced to customer record when logged in.
+
+6. Checkout & orders
+   • Checkout requires login; shows delivery flow with address, delivery slot,
+     payment method UI (COD / UPI / card / wallet placeholders).
+   • Order submission creates a row in purchase table (order id, cart JSON,
+     customer id, delivery address as JSON-safe storage, status, timestamp).
+   • Order history page (?order) for logged-in users: table of orders with
+     totals derived from cart JSON, status styling, dates.
+
+7. Customer accounts
+   • Sign up: name, email, phone, address, password (hashed); customer id derived
+     via hash; empty cart/wishlist initialised in DB.
+   • Login: email + password; restores cart/wishlist from DB into session.
+   • Logout clears session and returns to home.
+
+8. Static / legal
+   • Terms page (?terms) with anchor-friendly sections (refunds, privacy, etc.).
+
+
+ADMIN PANEL (/admin/)
+---------------------
+• Session-protected; login gate redirects unauthenticated users to admin/login.php.
+• Dashboard (default): summary metrics (orders, revenue-style aggregates where
+  implemented), navigation.
+• Clients: list / manage registered customers (per admin/pages).
+• Orders: list purchases, status display, client/cid and address context,
+  status update actions, row actions as implemented.
+• Products: tabular list of all products with search; link to edit per pid.
+• Edit product: full CRUD-style form (name, brand, short/long description,
+  price, quantity, discount, category); image management with upload helper
+  and storage folder per product.
+• Logout destroys admin session.
+
+• Optional script (not part of runtime navigation): seed_products_from_images.php
+  scans assets/images/products and upserts product rows with realistic metadata
+  for demos (run manually via CLI or browser once).
+
+
+DATABASE (HIGH LEVEL)
+---------------------
+• customer — cid, profile fields, hashed password, cart/wishlist JSON, join date.
+• product — pid, names, descriptions, imgs_link JSON, price, quantity, discount,
+  category.
+• purchase — order_id, cart JSON, customer cid, address (JSON-validated column),
+  status, purchase_date.
+
+Note: Local credentials and host are configured in admin/db.php for development.
+
+
+OPERATIONAL NOTES
+-----------------
+• Requires PHP + MySQL; web server should point document root at this folder (or
+  equivalent URL path used during development).
+• Customer uploads for product images typically live under storage/ (ignored by
+  .gitignore in development); bundled demo images live under assets/images/.
+• For production: change DB credentials, restrict admin URLs, use HTTPS, and
+  review SQL escaping / prepared statements for hardening.
+
+================================================================================
+  End of feature summary — update this file when you add major capabilities.
+================================================================================

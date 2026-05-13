@@ -171,8 +171,8 @@ include 'header.php';
 
       <div class="container">
 
-        <a href="#" class="header-logo">
-          <img src="./assets/images/icons/electroshop.png" alt="Anon's logo" width="120" height="100">
+        <a href="./?home" class="header-logo">
+          <img src="./assets/images/icons/electroshop.png" alt="ElectroShop home" width="120" height="100">
         </a>
 
         <div class="header-search-container">

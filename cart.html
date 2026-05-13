@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .product-featured {
+            padding: 20px;
+        }
+        
+        .showcase-title {
+            font-size: 24px;
+            margin: 5px 0;
+        }
+        .price-box {
+            font-size: 16px;
+            color: red;
+        }
+        .add-cart-btn {
+            margin-top: 10px;
+        }
+		.cart{
+		width:70%;
+		margin:16px auto;
+		background-color:#fff;
+		}
+		.cart  img{
+		width:100%;
+		aspect-ratio:16/9;
+		padding:8px;
+		}
+		
+		@media (max-width:600px){
+		  .w3-col.s6{
+		  width:100% !important;
+		  .showcase-title{
+		  text-align:center;
+		  padding:4px 4px;
+		  }
+		  .w3-small{
+		  text-align:justify;
+		  padding:4px 4px;
+		  margin:2px;
+		  }
+		  
+		   .w3-button{
+		 justify-content: center;
+         display: flex;
+         margin-left: 65px;
+         margin-bottom: 8px;
+		  }
+		  }  
+		 
+		}
+    </style>
+</head>
+<body class="w3-light-grey">
+
+    <div class="w3-container product-featured">
+        <h2 class="w3-text-red">Shopping Cart</h2>
+		
+		
+		 <div class="cart w3-card">
+		 <div class="w3-row">
+		 <div class="w3-col s6">
+		   <img src="./assets/images/mac.jpeg" alt="MacBook Air" class="">
+		 
+		 </div>
+          
+            <div class="w3-col s6">
+                <h3 class="showcase-title">MacBook Air</h3>
+                <p class="w3-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, fugiat, neque dolorem sed assumenda corporis cupiditate odio nisi harum ipsum sit aliquam voluptas aperiam magnam maiores optio earum praesentium dolore?</p>
+                <div class="price-box">
+                    ₹89,900.00 <del class="w3-text-grey">₹99,900.00</del>
+                </div>
+                <button class="w3-button  w3-red w3-round add-cart-btn">Remove</button>
+            </div>
+			</div>
+        </div>
+		
+		
+		
+		 <div class="cart w3-card">
+		 <div class="w3-row">
+		 <div class="w3-col s6">
+		   <img src="./assets/images/s25.jpeg" alt="Samsung S25 Ultra" class="">
+		 
+		 </div>
+          
+            <div class="w3-col s6">
+                <h3 class="showcase-title">Samsung S25 Ultra</h3>
+                <p class="w3-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, aliquam doloribus magnam quae veritatis provident voluptatem. Vero, amet, perferendis, voluptas quasi repellendus tempore fugit provident officiis cumque perspiciatis et ducimus.</p>
+                <div class="price-box">
+                    ₹181,000.00 <del class="w3-text-grey">₹191,000.00</del>
+                </div>
+                <button class="w3-button w3-red w3-round add-cart-btn ">Remove</button>
+            </div>
+			</div>
+        </div>
+
+       
+
+        
+
+        <div class="w3-container w3-padding w3-center">
+            <h3>Total: ₹270,900.00</h3>
+            <button class="w3-button w3-green w3-large w3-round">Proceed to Checkout</button>
+        </div>
+    </div>
+
+</body>
+</html>

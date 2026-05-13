@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>product</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .product-container { max-width: 1200px; margin: auto; padding: 20px; }
+        .product-img { max-width: 100%; height: auto; }
+        .details-table { width: 100%; border-collapse: collapse; }
+        .details-table td, .details-table th { border: 1px solid #ddd; padding: 8px; }
+        .details-table tr:nth-child(even){ background-color: #f2f2f2; }
+        .details-table th { background-color: #f44336; color: white; text-align: left; }
+        .product-header { border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+        .product-price { font-size: 24px; font-weight: bold; color: #333; }
+		.product-des { font-size: 18px;  color: #333; }
+        .discount { color: red; font-weight: bold; }
+        .button { background-color: #f44336; color: white; padding: 10px; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="w3-container product-container">
+        
+        <div class="w3-row w3-card">
+		<h2 class="product-header w3-center">Product Name</h2>
+            <div class="w3-col m6">
+                <img src="./assets/images/mac.jpeg" alt="mac" class="product-img">
+            </div>
+			
+            <div class="w3-col m6">
+			<p class="product-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, perspiciatis, qui obcaecati molestias numquam id fugit optio sunt possimus fugiat? Tenetur, iste accusantium voluptatum accusamus in dolore quisquam repellat esse.</span></p>
+                <p class="product-price">₹ 70,999.20 <span class="discount">20% off</span></p>
+                <p><b>MRP:</b> ₹ 56,000.00, You save ₹ 14,199.00</p>
+                <label>Quantity:</label>
+                <select class="w3-select" style="width: 100px;">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <button class="w3-button button">ADD TO CART</button>
+				<button class="w3-button button w3-green">Buy Now</button>
+            </div>
+        </div>
+        
+        <h3 class="w3-margin-top">Product Details</h3>
+        <table class="w3-table details-table">
+            <tr>
+                <th>Manufacturer</th>
+                <td>Appple</td>
+            </tr>
+            <tr>
+                <th>Product Dimensions</th>
+                <td>1920*1080</td>
+            </tr>
+            <tr>
+                <th>Warranty</th>
+                <td>1 Year</td>
+            </tr>
+            <tr>
+                <th>Weight</th>
+                <td>1.8 Kg</td>
+            </tr>
+           
+        </table>
+    </div>
+</body>
+</html>

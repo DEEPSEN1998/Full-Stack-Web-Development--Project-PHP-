@@ -1,0 +1,9 @@
+# Uploaded product images per PID (large / environment-specific)
+/storage/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
